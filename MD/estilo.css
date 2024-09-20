@@ -1,0 +1,403 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Kanit", sans-serif;
+
+}
+
+p {
+    color: #a8a8a8;
+}
+
+/* CLASSES GERAIS */
+.container {
+    width: 98%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.gradient {
+    background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CABEÇALHO */
+#topo {
+    width: 100%;
+    height: 100px;
+    padding-top: 15px;
+    position: fixed;
+}
+
+#logotipo {
+    width: 100%;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#logotipo a {
+    color: #fff;
+}
+
+#menu {
+    width: 100%;
+    height: 50px;
+}
+
+#navegacao {
+    display: none;
+}
+
+#menumobile {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* CSS BANNER */
+
+#banner {
+    background: #333 url(img/HeartHand.PNG) center no-repeat;
+    background-blend-mode: overlay;
+    background-size: cover;
+    padding: 150px 0 60px;
+    text-align: center;
+}
+
+#banner h1 {
+    color: #fff;
+    font-size: 35px;
+    line-height: 35px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* SOBRE */
+
+#sobre {
+    padding: 50px 0;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h2::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+    margin: 0 auto 10px;
+}
+
+.infobox {
+    margin-top: 40px;
+}
+
+.infobox i {
+    font-size: 40px;
+}
+
+.infobox h4 {
+    font-size: 20px;
+}
+
+.imagem-box {
+    margin-top: 40px;
+}
+
+.imagem-box img {
+    box-shadow: 10px 10px 0 #cd9ffa;
+}
+
+/* SERVIÇOS */
+#servicos {
+    padding: 50px 0;
+    background: #f3f2f2;
+    text-align: center;
+}
+
+#servicos .btn {
+    margin-top: 20px;
+}
+
+.servico-card {
+    display: block;
+    box-shadow: 0 0 10px #ccc;
+    margin-top: 40px;
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+    transition: all .4s;
+    position: relative;
+}
+
+.servico-card:hover {
+    background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+    transform: translateY(-10px);
+}
+
+.servico-card:hover h3,
+.servico-card:hover p,
+.servico-card:hover .circle {
+    color: #fff;
+    border-color: #fff;
+}
+
+.servico-card:hover .gradient {
+    background: #fff;
+    background-clip: text;
+}
+
+.circle {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #a8a8a8;
+    color: #a8a8a8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto 0;
+    border-radius: 50%;
+}
+
+.circle i {
+    font-size: 16px !important;
+}
+
+.servico-card h3 {
+    font-size: 22px;
+    color: #000;
+    margin-top: 10px;
+}
+
+.servico-card i {
+    font-size: 40px;
+}
+.servico-card:first-child::before{
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-top: 10px solid #7a60ff;
+    border-left: 10px solid #7a60ff;
+}
+.servico-card:last-child::before{
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 10px solid #7a60ff;
+    border-right: 10px solid #7a60ff;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 375px) {}
+
+@media (min-width: 426px) {}
+
+@media (min-width: 576px) {
+    #banner h1 {
+        font-size: 65px;
+        line-height: 65px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .imagem-box {
+        width: 600px;
+        margin: 40px auto 0;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* CABEÇALHO */
+    #topo .container {
+        height: 100%;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    #topo {
+        height: 70px;
+        padding-top: 0;
+    }
+
+    #logotipo {
+        width: 20%;
+        text-align: left;
+    }
+
+    #menu {
+        width: 80%;
+    }
+
+    #menumobile {
+        display: none;
+    }
+
+    #navegacao {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .linkmenu {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    /* BANNER */
+    #banner {
+        padding-bottom: 120px;
+    }
+
+    #bannet h1 {
+        font-size: 75px;
+        line-height: 75px;
+    }
+
+    /* SERVIÇOS */
+    .servico-card {
+        width: 48%;
+
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 992px) {
+    h2 {
+        font-size: 48px;
+    }
+
+    /* BANNER */
+
+    #banner {
+        padding-bottom: 120px;
+    }
+
+    #bannet h1 {
+        font-size: 96px;
+        line-height: 96px;
+    }
+
+    /* SOBRE */
+    #sobre .container {
+        flex-direction: row;
+    }
+
+    #sobre {
+        text-align: left;
+    }
+
+    .textobox,
+    .imagem-box {
+        width: 50%;
+        padding: 10px;
+    }
+
+    h2::before {
+        margin: 0 0 10px;
+    }
+
+    .infobox {
+        display: flex;
+    }
+
+    .icone {
+        width: 10%;
+        margin-right: 20px;
+    }
+
+    .texto {
+        width: 90%;
+    }
+
+    .infobox h4 {
+        line-height: 15px;
+        margin-bottom: 10px;
+    }
+
+    .imagem-box {
+        height: 480px;
+        margin: 0;
+    }
+
+    /* SERVIÇOS */
+    .servico-card {
+        width: 31%;
+    }
+
+    #servicos {
+        text-align: left;
+    }
+
+    .cabecalho {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .cabecalho div:first-child {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1200px) {}
